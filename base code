@@ -1,0 +1,20 @@
+
+from openpyxl import Workbook, load_workbook
+from os import walk
+from requests import RequestException, get
+from contextlib import closing
+from bs4 import BeautifulSoup
+
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+import seaborn as sns
+
+#fantrax transactions 2016
+#url = BeautifulSoup(open(r'C:\users\wilgj\desktop\page.html'),'html.parser')
+#len(list(list(list(list(list(list(list(list(list(list(list(list(list(list(list(list(soup)[4])[2])[1])[23])[9])[11])[1])[7])[1])[1])[5])[1])[3])[1])[1])[1])
+
+r = requests.get(url)
+
+2016 link: https://www.fantrax.com/newui/fantasy/txDetailsHistory.go?leagueId=yxjtb1p2ij7vhedv&prevPageNumber=&pageNumber=&adminMode=false&type=CLAIM_DROP&hiddenTabCount=2&team=ALL&positionOrGroup=ALL&maxResultsPerPage=1000&executedOnly=true&_executedOnly=
+2017 link: https://www.fantrax.com/newui/fantasy/txDetailsHistory.go?leagueId=2hv352xij02mc8x6&prevPageNumber=&pageNumber=&adminMode=false&type=CLAIM_DROP&hiddenTabCount=2&team=ALL&positionOrGroup=ALL&maxResultsPerPage=1000&executedOnly=true&_executedOnly=
